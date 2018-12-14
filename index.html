@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" id="textTrick" /><label for="textTrick"></label>
+    <div class="flexTrick">
+      <div>a</div>
+      <div>b</div>
+      <div>c</div>
+      <div>d</div>
+      <div>e</div>
+      <div>f</div>
+      <div>g</div>
+      <div>h</div>
+    </div>
+    <style>
+      input {
+        display: none;
+      }
+      div {
+        text-transform: uppercase;
+      }
+      .flexTrick {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20px;
+      }
+      input:checked + label + div.flexTrick {
+        flex-direction: column-reverse;
+      }
+      label {
+        border: 10px solid transparent;
+        border-bottom: 20px solid red;
+        display: block;
+        width: 0;
+      }
+      input:checked + label {
+        border: 10px solid transparent;
+        border-top: 20px solid green;
+        display: block;
+        width: 0;
+        margin-top: 20px;
+      }
+    </style>
+  </body>
+</html>
